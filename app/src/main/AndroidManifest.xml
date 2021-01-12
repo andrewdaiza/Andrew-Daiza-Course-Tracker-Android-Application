@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.wgu.c196.andrewdaiza">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.MainActivity"
+            android:label="Andrew Daiza C196"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.TermsListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.EditTermActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.CourseEditorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.NoteEditorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.NotesListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.AssessmentAddEditActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.MentorEditorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.wgu.c196.andrewdaiza.activities.MentorsListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <receiver android:name=".utilities.CallAlert" />
+    </application>
+
+</manifest>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CourseEditorActivity">
+
+    <Button
+        android:id="@+id/delete_course"
+        android:layout_width="117dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="12dp"
+        android:background="#E91E63"
+        android:text="Delete Course"
+        app:layout_constraintEnd_toStartOf="@+id/btn_course_notes"
+        app:layout_constraintTop_toTopOf="@+id/btn_course_notes" />
+
+    <Button
+        android:id="@+id/btn_course_notes"
+        android:layout_width="153dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorAccent"
+        android:text="Course Notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_title_text" />
+
+    <Button
+        android:id="@+id/btn_course_mentors"
+        android:layout_width="152dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorAccent"
+        android:text="Course Mentors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_course_notes" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/save_alarm_end"
+        android:layout_width="134dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="28dp"
+        android:background="#FF5722"
+        android:text="Save End Date Alarm"
+        app:layout_constraintStart_toEndOf="@+id/end_date_select"
+        app:layout_constraintTop_toTopOf="@+id/end_date_select" />
+
+    <Spinner
+        android:id="@+id/status_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_weight="1"
+        android:entries="@array/status_values"
+        android:gravity="end"
+        app:layout_constraintStart_toEndOf="@+id/course_status_text"
+        app:layout_constraintTop_toTopOf="@+id/course_status_text" />
+
+    <TextView
+        android:id="@+id/start_date_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Start Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_status_text" />
+
+    <TextView
+        android:id="@+id/start_date_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:hint="Select Start Date"
+        app:layout_constraintStart_toEndOf="@+id/start_date_text"
+        app:layout_constraintTop_toTopOf="@+id/start_date_text" />
+
+    <Button
+        android:id="@+id/save_alarm_start"
+        android:layout_width="138dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="20dp"
+        android:background="#FF5722"
+        android:text="Save Start Date Alarm"
+        app:layout_constraintStart_toEndOf="@+id/start_date_select"
+        app:layout_constraintTop_toTopOf="@+id/start_date_select" />
+
+    <TextView
+        android:id="@+id/end_date_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="End Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_date_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/course_assessment_list"
+        android:layout_width="386dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="12dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_assessment"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toEndOf="@+id/save_course"
+        app:layout_constraintTop_toBottomOf="@+id/save_alarm_end"
+        app:layout_constraintVertical_bias="0.4"
+        tools:listitem="@layout/item_assessment" />
+
+    <TextView
+        android:id="@+id/course_status_text"
+        android:layout_width="55dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="Status"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_title_text" />
+
+    <EditText
+        android:id="@+id/course_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:autofillHints="auto"
+        android:hint="Course Title"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout5"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_assessment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
+    <TextView
+        android:id="@+id/end_date_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:hint="Select End Date"
+        app:layout_constraintStart_toEndOf="@+id/end_date_text"
+        app:layout_constraintTop_toTopOf="@+id/end_date_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

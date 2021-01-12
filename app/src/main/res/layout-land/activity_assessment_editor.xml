@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AssessmentAddEditActivity">
+
+    <Button
+        android:id="@+id/assesment_alarm"
+        android:layout_width="127dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:background="#FF5722"
+        android:text="Save with Alarm"
+        app:layout_constraintStart_toEndOf="@+id/due_date_select"
+        app:layout_constraintTop_toTopOf="@+id/due_date_select" />
+
+    <Button
+        android:id="@+id/delete_assesment"
+        android:layout_width="147dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="80dp"
+        android:background="#E91E63"
+        android:text="Delete Assesment"
+        app:layout_constraintStart_toEndOf="@+id/status_type_select"
+        app:layout_constraintTop_toTopOf="@+id/status_type_select" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_assesment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_save" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Spinner
+        android:id="@+id/assessment_type_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:entries="@array/assessment_types"
+        app:layout_constraintStart_toEndOf="@+id/assessment_view_text"
+        app:layout_constraintTop_toTopOf="@+id/assessment_view_text" />
+
+    <TextView
+        android:id="@+id/due_date_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:hint="Select Due Date"
+        app:layout_constraintStart_toEndOf="@+id/date_view_text"
+        app:layout_constraintTop_toTopOf="@+id/date_view_text" />
+
+    <Spinner
+        android:id="@+id/status_type_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:entries="@array/assessment_values"
+        app:layout_constraintStart_toEndOf="@+id/status_view_text"
+        app:layout_constraintTop_toTopOf="@+id/status_view_text" />
+
+    <TextView
+        android:id="@+id/assessment_view_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:text="Assesment Type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessment_title_view_text" />
+
+    <TextView
+        android:id="@+id/date_view_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:text="Due Date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_view_text" />
+
+    <TextView
+        android:id="@+id/status_view_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:text="Status"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assessment_view_text" />
+
+    <EditText
+        android:id="@+id/assessment_title_view_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:autofillHints="auto"
+        android:hint="Title"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout4"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

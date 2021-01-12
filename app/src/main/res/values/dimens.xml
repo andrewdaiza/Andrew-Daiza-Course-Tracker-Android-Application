@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="NORMAL_BORDER_MARGIN">16dp</dimen>
+    <dimen name="NORMAL_MARGIN_TOP">8dp</dimen>
+</resources>
